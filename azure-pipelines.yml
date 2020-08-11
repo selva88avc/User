@@ -25,23 +25,23 @@ resources:
 
 jobs:
   - public: true
-  plan:
-  - get: source-code
-    trigger: true
-  - task: Maven@3
-    inputs:
-      mavenPomFile: 'pom.xml'
-      mavenOptions: '-Xmx3072m'
-      javaHomeOption: 'JDKVersion'
-      jdkVersionOption: '1.8'
-      jdkArchitectureOption: 'x64'
-      publishJUnitResults: true
-      testResultsFiles: '**/surefire-reports/TEST-*.xml'
-      goals: 'package'
-  - put: cf
-    params:
-      manifest: source-code/manifest.yml
-      path: $(TargetFolder)/user-0.0.1-SNAPSHOT.jar
+    plan:
+    - get: source-code
+      trigger: true
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'pom.xml'
+        mavenOptions: '-Xmx3072m'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.8'
+        jdkArchitectureOption: 'x64'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        goals: 'package'
+    - put: cf
+      params:
+        manifest: source-code/manifest.yml
+        path: $(TargetFolder)/user-0.0.1-SNAPSHOT.jar
 
 
 
