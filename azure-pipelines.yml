@@ -11,17 +11,17 @@ pool:
 
 resources:
   - type: git
-  source:
-    uri: https://github.com/selva88avc/user.git
-    branch: master
+    source:
+      uri: https://github.com/selva88avc/user.git
+      branch: master
   - type: cf
-  source:
-    api: https://api.run.pivotal.io
-    username: selvakumar.ganesan2@cognizant.com
-    password: #Infy123
-    organization: IIHT Limited
-    space: development
-    skip_cert_check: true
+    source:
+      api: https://api.run.pivotal.io
+      username: selvakumar.ganesan2@cognizant.com
+      password: #Infy123
+      organization: IIHT Limited
+      space: development
+      skip_cert_check: true
 
 jobs:
   - public: true
