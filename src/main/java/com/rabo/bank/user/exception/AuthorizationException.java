@@ -1,16 +1,16 @@
 package com.rabo.bank.user.exception;
 
-public class UserNotFoundException extends RuntimeException{
+public class AuthorizationException extends RuntimeException{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private final String message;
-	public UserNotFoundException() {
-		this("User Not Found");
+	public AuthorizationException() {
+		this("Authorization Failed");
 	}
 
-	public UserNotFoundException(String message) {
+	public AuthorizationException(String message) {
 		super();
 		this.message = message;
 	}
@@ -18,5 +18,4 @@ public class UserNotFoundException extends RuntimeException{
 	public String getMessage() {
 		return message;
 	}
-
 }

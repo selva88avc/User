@@ -12,12 +12,7 @@
 
 package com.rabo.bank.user.model;
 
-import java.util.Objects;
-
 import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 
 /**
  * Address
@@ -25,8 +20,8 @@ import javax.persistence.Id;
 @Embeddable
 public class Address {
 	public Address() {
-		  
-	  }
+
+	}
 	public Address(String addressLine1, String addressLine2, String addressline3) {
 		super();
 		this.addressLine1 = addressLine1;
@@ -68,13 +63,6 @@ public class Address {
 	private String addressLine2 = null;
 
 	private String addressLine3 = null;
-
-
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(addressLine1, addressLine2, addressLine3);
-	}
 
 
 	@Override

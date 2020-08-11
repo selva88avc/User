@@ -14,7 +14,6 @@
 package com.rabo.bank.user.model;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,29 +30,29 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int userId;
 	public User() {
-		  
+
 	}
-	
+
 	private String firstName = null;
 
 	private String lastName = null;
-	
+
 	@Column(unique = true)
-	private String userName;
-	private String passWord;
+	private String username;
+	private String password;
 	@Column(unique = true)
 	private String email;
 	private String role;
-	
-	
-	public User(int userId, String firstName, String lastName, String userName, String passWord, String email,
+
+
+	public User(int userId, String firstName, String lastName, String username, String password, String email,
 			String role, Address address) {
 		super();
 		this.userId = userId;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.userName = userName;
-		this.passWord = passWord;
+		this.username = username;
+		this.password = password;
 		this.email = email;
 		this.role = role;
 		this.address = address;
@@ -64,17 +63,17 @@ public class User {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-	public String getPassWord() {
-		return passWord;
+	public String getPassword() {
+		return password;
 	}
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getEmail() {
 		return email;
@@ -112,8 +111,8 @@ public class User {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	
-	
+
+
 
 	@Embedded
 	private Address address = null;

@@ -1,0 +1,9 @@
+applications:
+  - name: User
+    memory: 768M
+    path: /target/user-0.0.1-SNAPSHOT.jar
+    services: 
+      - mysqldatabase
+    buildpacks:
+      - https://github.com/cloudfoundry/java-buildpack.git
+  

@@ -1,0 +1,2 @@
+INSERT INTO `user` (`userId`, `addressLine1`, `addressLine2`, `addressLine3`, `email`, `firstName`, `lastName`, `password`, `role`, `username`) VALUES ('25', 'qqq', 'qq', 'qq', 'ss1@dd.com', 'sss', 'ss', '$2a$10$oGCAR1ZhWW8FRfaaWEercOrCEje22SjzBsoGuUz441v69TIMhJCPm', 'admin', 'vinith');
+INSERT INTO `user` (`userId`, `addressLine1`, `addressLine2`, `addressLine3`, `email`, `firstName`, `lastName`, `password`, `role`, `username`) VALUES ('22', 'qqq', 'qq', 'qq', 'ss2@dd.com', 'sss', 'ss', '$2a$10$oGCAR1ZhWW8FRfaaWEercOrCEje22SjzBsoGuUz441v69TIMhJCPm', 'admin', 'sujith');
